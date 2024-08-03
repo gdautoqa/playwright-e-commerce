@@ -39,7 +39,7 @@ test('Shopping', async ({ page }) => {
   // Verify navigation to the homepage
   await ecommerce.verifyPageURL('https://ecommerce-playground.lambdatest.io/index.php?route=common/home');
 
-  // **Apple iPad Product Page**
+  // **iPod Nano Product Page**
 
   // Navigate to Apple iPad
   await ecommerce.hoverMegaMenu();
@@ -66,6 +66,8 @@ test('Shopping', async ({ page }) => {
   // Verify navigation to the homepage
   await ecommerce.verifyPageURL('https://ecommerce-playground.lambdatest.io/index.php?route=common/home');
 
+  // **Canon EOS 5D Product Page**
+
   // Navigate to Mouse and Keyboard
   await ecommerce.hoverMegaMenu();
   await ecommerce.page.click('//a[contains(text(), "Mouse & Keyboard")]');
@@ -73,19 +75,17 @@ test('Shopping', async ({ page }) => {
   // Verify navigation to the Mouse & Keyboard category page
   await ecommerce.verifyPageURL('https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=29');
 
-  // Select page 5
-  await ecommerce.page.getByRole('link', { name: '5', exact: true }).click();
-
-  // **Canon EOS 5D Product Page**
+  // Select page 4
+  await ecommerce.page.getByRole('link', { name: '4', exact: true }).click();
 
   // Select Canon EOS 5D
-  await ecommerce.page.getByRole('link', { name: 'Canon EOS 5D Canon EOS 5D' }).click();
+  await page.locator('#mz-product-grid-image-92-212408').click();
 
   // Verify navigation to the Canon EOS 5D product page
-  await ecommerce.verifyPageURL('https://ecommerce-playground.lambdatest.io/index.php?route=product/product&path=25_29&product_id=95');
+  await ecommerce.verifyPageURL('https://ecommerce-playground.lambdatest.io/index.php?route=product/product&path=25_29&product_id=92');
 
   // Choose 'Small' under Please Select
-  await ecommerce.selectSize('117');
+  await ecommerce.selectSize('103');
 
   // Add to Cart
   await ecommerce.addToCart();

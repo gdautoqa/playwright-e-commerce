@@ -58,9 +58,8 @@ export class EcommercePage {
   }
 
   async selectSize(sizeOption: string) {
-    await this.page.locator('#input-option247-216836').selectOption(sizeOption);
+    await this.page.locator('#input-option244-216836').selectOption(sizeOption);
   }
-
   // Cart and Checkout Methods
 
   async viewCart() {
